@@ -57,6 +57,18 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Migrations
+
+Database migrations use TypeORM and the DataSource in `src/data-source.ts` (loads `.env` for DB config).
+
+```bash
+# Generate a new migration (replace MigrationName with your migration name)
+$ npm run migration:generate -- src/migrations/MigrationName
+
+# Run all pending migrations
+$ npm run migration:run
+```
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
